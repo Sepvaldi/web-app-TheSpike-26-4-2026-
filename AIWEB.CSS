@@ -1,0 +1,412 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%230581c5' fill-opacity='0.08' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+
+@font-face {
+    font-family: 'jaro';
+    src: url('path/to/jaro-font.woff2') format('woff2');
+}
+    /*css grid layout for desktop */
+
+        .navbar ul{
+            list-style: none;
+            padding-right: 100px;
+            display: flex;
+            gap: 180px;
+        }
+        .navbar {
+            position: fixed;
+            z-index: 1000;
+            background: linear-gradient(to right, #101520, #425786);
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 400px;
+            box-shadow: 0px 40px 0px 0px rgba(0, 0, 0, 0.6);
+            grid-area: navbar;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-family: 'jaro', sans-serif;
+            font-size: 200px;
+            padding-left: 50px;
+        }
+        .logo{
+            width: auto;
+            height: 900px;
+        }
+    /*video for web */
+        .hero {
+            position: relative;
+            width: 100%;
+            grid-area: hero;
+        }
+        .Trailer{
+            width: 100%;
+            height: auto;
+        }
+        .store-buttons {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10%;
+            cursor: pointer;
+            text-align: center;
+        }
+        .store-buttons img {
+            padding-right: 100px;
+            padding-bottom: 50px;
+            width: 900px;
+            height: auto;
+            margin:5px;
+            transition: 0.4s;
+        }
+        .store-buttons img:hover{
+            transform: scale(1.1);
+        }
+        .News {
+            margin: 300px auto 200px auto;
+            width: 80%;
+            display: inline-block;
+            border: 30px solid #101520;
+            background-color: rgb(74, 170, 230, 0.58);
+            display: block;
+            grid-area: News;
+            position: relative;
+        }
+        .card{
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 200px 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            border: 20px solid #101520;
+            background-color: rgb(74, 170, 230, 0.58);
+            border-radius: 10px
+
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px;
+        }   
+        .card p{
+            font-family: 'jaro', sans-serif;
+            font-size: 200px;
+            color: #ffffff;
+            text-align: center; 
+        }
+        .red{
+            color: red;
+        }
+        .orange{
+            color: orange;
+        }
+        .Wind{
+            color: aqua;
+        }
+        .black-blue{
+            color: navy;
+        }
+        .News h2{
+            font-family: 'jaro', sans-serif;
+            font-size: 200px;
+            color:#101520;
+            background-color: #f0f2f7;
+            border: 30px solid #101520;
+            border-radius: 170px 50px;
+            padding: 10px 200px;
+            display: inline-block;
+            position: absolute;
+            transform: translate(20%, -100%);
+        }
+
+    .download {
+        grid-area: download;
+        position: relative;
+        background-color: rgb(0, 139, 226, 0.69) ;
+        padding: 200px;
+        padding-bottom: 100px ;
+        margin-top: 300px;
+        text-align: center;
+        justify-content: center;
+        align-items: center
+    }
+    .download-card {
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;  
+        align-items: center;     
+        gap: 100px;
+        flex:1;
+        margin: -50px;
+    }
+    .download-card img {
+        height: auto;
+        width: 700px;
+        border-radius: 100px;
+    }
+    .download h2 {
+        font-family: 'jaro', sans-serif;
+        font-size: 200px;
+        color: #ffffff;
+        margin-bottom: 50px;
+    }
+    .download-buttom {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 200px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .download-buttom{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        text-align: center;
+    }
+    .download-buttom img {
+        padding-right: 100px;
+        padding-bottom: 50px;
+        width: 900px;
+        height: auto;
+        margin:5px;
+        transition: 0.4s;
+    }
+    .download-buttom img:hover{
+        transform: scale(1.1);
+    }
+    .download ul{
+        color: #ffffff;
+        font-size: 69px;
+        list-style: none;
+    }
+    footer {
+        text-align: center;
+        font-family: Arial, sans-serif; /* Mengikuti gaya font di gambar */
+        padding: 20px;
+        margin-top: 100px;
+    }
+    .Social-Media-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 15px;
+    }
+    .Social-Media-icon h3 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 100px;
+    }
+    .Social-Media-icon ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 50px;
+    }
+    .Social-Media-icon ul li img {
+        width: 200px;
+        height: auto;
+        display: block;
+    }
+    .yt img{
+        margin-top: 25px;
+    }
+    .Social-Media-icon ul li a img {
+        transition: transform 0.3s ease, filter 0.3s ease; /* Transisi agar gerakan halus */
+    }
+    .Social-Media-icon ul li a:hover img {
+        transform: translateY(-5px) scale(1.1); /* Ikon sedikit naik dan membesar */
+        filter: brightness(1.2); /* Ikon jadi sedikit lebih terang */
+    }
+    /* Efek saat ikon diklik (Active) */
+    .Social-Media-icon ul li a:active img {
+        transform: scale(0.9); /* Ikon mengecil sejenak saat ditekan */
+        transition: transform 0.1s;
+    }
+    .Copyright {
+        margin-top: 50px;
+        font-size: 50px;
+        color: #888888;
+        text-align: center;
+    }
+
+
+/* --- TAMPILAN TABLET (max-width: 780px) --- */
+@media screen and (max-width: 780px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Navbar Tablet */
+    .navbar {
+        height: auto;
+        padding: 20px 0;
+        flex-direction: column;
+        position: relative; /* Menghindari overlap konten */
+    }
+    .logo {
+        height: 150px;
+    }
+    .navbar ul {
+        padding: 0;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    .navbar a {
+        font-size: 24px;
+        padding-left: 0;
+    }
+
+    /* Hero & Store Buttons */
+    .store-buttons img {
+        width: 250px; /* Mengecilkan tombol Playstore/Apple */
+        padding: 0;
+        margin: 10px;
+    }
+
+    /* News Section */
+    .News {
+        display: block;
+        margin: 100px 20px;
+        border-width: 10px;
+        padding: 40px 10px;
+        border-width: 10px;
+        width: auto;
+    }
+    .News h2 {
+        font-size: 40px;
+        padding: 10px 50px;
+        border-width: 10px;
+        transform: translate(10%, -100%);
+    }
+    .card {
+        margin: 50px 10px;
+        grid-template-columns: 1fr; /* Gambar di atas, teks di bawah */
+        border-width: 8px;
+        gap: 10px;
+        text-align: center;
+    }
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+    .card p {
+        font-size: 30px !important;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* About Text (Sesuai HTML sebelumnya) */
+    .text h3, .desc-text h3 {
+        font-size: 35px;
+    }
+    .text p, .desc-text p {
+        font-size: 18px;
+    }
+
+    /* Download Section */
+    .download {
+        padding: 50px 20px;
+    }
+    .download-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .download-card img {
+        width: 200px;
+    }
+    .download h2 {
+        font-size: 40px;
+    }
+    .download-buttom img {
+        width: 200px;
+        padding: 0;
+    }
+    .download ul {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .Social-Media-icon {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Social-Media-icon h3 {
+        font-size: 30px;
+    }
+    .Social-Media-icon ul li img {
+        width: 50px;
+    }
+    .Copyright {
+        font-size: 14px;
+    }
+}
+
+/* --- TAMPILAN HP (max-width: 380px) --- */
+@media screen and (max-width: 380px) {
+    .logo {
+        height: 80px;
+    }
+    .navbar a {
+        font-size: 18px;
+    }
+    .navbar ul {
+        gap: 15px;
+    }
+    
+    .store-buttons img {
+        width: 140px;
+    }
+
+    .News{
+        margin: 80px 10px;
+    }
+
+    .News h2 {
+        font-size: 28px;
+        padding: 5px 25px;
+        transform: translate(5%, -100%);
+    }
+
+    .card p {
+        font-size: 18px !important;
+    }
+
+    .card img{
+        width: 100%;
+        border-bottom: 5px solid #101520;
+    }
+
+    .text h3, .desc-text h3 {
+        font-size: 24px;
+    }
+
+    .download h2 {
+        font-size: 30px;
+    }
+    
+    .download-buttom img {
+        width: 150px;
+    }
+}
