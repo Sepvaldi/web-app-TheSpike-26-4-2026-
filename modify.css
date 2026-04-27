@@ -1,0 +1,508 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%230581c5' fill-opacity='0.08' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@font-face {
+    font-family: 'jaro';
+    src: url('path/to/jaro-font.woff2') format('woff2');
+}
+
+.container {
+            grid-template-areas: 
+            "navbar"
+            "hero"
+            "News"
+            "download"
+            "footer";
+
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: 1fr;
+        gap: 10px;
+}
+
+/* Navigasi bar */
+
+.navbar {
+    position: fixed;
+    z-index: 1000;
+    background: linear-gradient(to right, #101520, #425786);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.6);
+    grid-area: navbar;
+}
+
+.navbar ul{
+    list-style: none;
+    padding-right: 100px;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: 'jaro', sans-serif;
+    font-size: 40px;
+    padding-left: 10px;
+}
+
+.toop{
+    border-right: 5px solid white;
+    padding-right: 30px;
+}
+
+.newss{
+    border-right: 5px solid white;
+    padding-right: 30px;
+}
+
+.logo{
+    width: auto;
+    height: 200px;
+}
+
+
+/*hero*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    grid-area: hero;
+    display: flex;
+}
+
+.Trailer{
+    width: 100%;
+    height: auto;
+}
+
+.store-buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    display: flex;
+    gap: 50px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.store-buttons img {
+    width: 300px;
+    height: auto;
+    transition: 0.4s
+}
+
+.store-buttons img:hover{
+    transform: scale(1.1);
+}
+
+/*News*/
+.News {
+    position: relative;
+    display: flex;
+    padding: 0px 20px 50px 20px;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+    grid-area: News;
+    display: flex;
+    margin-top: 100px;
+}
+
+.News h2 {
+    top: 25px;      
+    left: 20px;       
+    z-index: 10;       
+    background-color: rgb(0, 139, 226, 0.69);
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-style: italic;
+    font-size: 50px;
+    padding: 5px 40px 5px 30px;
+    margin-bottom: 20px;
+    
+    transform: skewX(-20deg); 
+    border-radius: 15px 0 15px 0;
+    
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    
+    position: relative;
+    margin-left: 0px;
+    top: -10px;
+
+}
+
+
+
+
+/* Container utama News agar bisa di-scroll */
+.boder-out-box {
+    max-height: 770px; /* Atur tinggi maksimal sesuai keinginan */
+    max-width: 1000px;
+    overflow-y: auto; /* Memberi ruang agar scrollbar tidamenempel ke gambar */
+    /* Warna border box sesuai permintaan */
+    border: 10px solid rgb(0, 139, 226, 0.69); 
+    border-radius: 30px;
+    padding: 0px 50px;
+    padding-top: 30px;
+    background-color: rgba(4, 155, 255, 0.233); /* Atau warna background card Anda */
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 1. Mengatur lebar scrollbar */
+.boder-out-box::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* 2. Mengatur Track (Latar belakang scrollbar) */
+.boder-out-box::-webkit-scrollbar-track {
+    background: rgb(74, 170, 230, 0.58); /* Warna background scrollbar */
+    border-radius: 10px;
+    margin: 10px 0; /* Memberi jarak di ujung atas/bawah */
+}
+
+/* 3. Mengatur Thumb (Batang geser scrollbar) */
+.boder-out-box::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Warna pink seperti di gambar */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Sedikit efek border putih transparan */
+}
+
+/* Efek saat thumb di-hover */
+.boder-out-box::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+/* Firefox Support (Opsional) */
+.boder-out-box {
+    scrollbar-width:thin;
+    scrollbar-color: #ffffff rgb(74, 170, 230, 0.58);
+}
+
+
+.card {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    padding-top:40px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 16px 24px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: block;
+}
+
+
+.card img {
+    width: 90%;        
+    height: auto;       
+    object-fit: cover;   
+    border-radius: 8px;
+    margin-right: 15px;
+    display: block;
+}
+
+
+.card-content {
+    flex: 1;
+}
+
+.card-content p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+    font-size: 30px;
+    line-height: 1.4;
+    background-color: white;
+    padding-top: 20px;
+
+}
+
+/* Styling warna khusus yang ada di HTML kamu */
+.red { color: #ff0000; font-weight: 900; }
+.orange { color: #ffa500; }
+.Wind { color: #00bfff; }
+.black-blue { color: #1e90ff; text-shadow: 1px 1px #000; }
+
+.download {
+    grid-area: download;
+    position: relative; 
+    background-color: rgb(0, 139, 226, 0.69);
+    padding-bottom: 50px ;
+    padding-top: 50px ;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center
+}
+
+.download-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    flex:1;
+}
+
+.download-card img {
+    height: auto;
+    width: 200px;
+    border-radius: 40px;
+}
+
+.download h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-style: italic;
+    font-size: 50px;
+    color: white;
+    margin-bottom: auto;
+    text-align: center;
+    transform: skewX(-20deg); 
+    margin-top: auto;
+}
+
+.download-buttom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.download-buttom img {
+    width: 300px;
+    height: auto;
+    transition: 0.4s;
+}
+
+.download-buttom img:hover{
+    transform: scale(1.1);
+}
+
+.download ul{
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 95px;
+    place-items: center;
+    list-style: none;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: rgb(255, 255, 255)
+}
+
+.Social-Media-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.Social-Media-icon h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.Social-Media-icon ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 50px;
+}
+
+.Social-Media-icon ul li img {
+    height: auto;
+    display: flex;
+}
+
+.Social-Media-icon ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Social-Media-icon ul li a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.Social-Media-icon ul li a:hover img {
+    transform: translateY(-5px) scale(1.1);
+    filter: brightness(1.2);
+}
+
+.Social-Media-icon ul li a:active img {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
+
+.Copyright {
+    margin-top: 30px;
+    font-size: 15px;
+    color: #888888;
+    text-align: center;
+}
+
+.Copyright ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.yt img{
+    margin-top: 5px;
+}
+
+
+/* --- TAMPILAN TABLET (max-width: 780px) --- */
+@media screen and (max-width: 780px) {
+    .container {
+        grid-template-columns: 1fr; /* Paksa jadi 1 kolom */
+    }
+
+    /* Navbar Tablet */
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+        position: relative; /* Agar tidak menutupi Hero saat scroll di layar pendek */
+    }
+    .logo {
+        height: 100px;
+    }
+    .navbar ul {
+        padding-right: 0;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .navbar a {
+        font-size: 20px;
+    }
+
+    /* Store Buttons di Hero */
+    .store-buttons {
+        gap: 20px;
+        bottom: 5%;
+    }
+    .store-buttons img {
+        width: 150px;
+    }
+
+    /* News Section */
+    .boder-out-box {
+        width: 90%;
+        padding: 20px;
+        max-height: 600px;
+    }
+    .card p {
+        font-size: 20px;
+    }
+
+    /* Download Section */
+    .download-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .download-buttom {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* --- TAMPILAN HANDPHONE (max-width: 480px) --- */
+@media screen and (max-width: 480px) {
+    /* Navbar HP */
+    .navbar a {
+        font-size: 16px;
+    }
+    .logo {
+        height: 70px;
+    }
+
+    /* Hero */
+    .store-buttons {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .store-buttons img {
+        width: 120px;
+    }
+
+    /* News */
+    .News h2 {
+        font-size: 30px;
+        padding: 5px 20px;
+    }
+    .boder-out-box {
+        padding: 10px;
+        border-width: 5px;
+    }
+    .card p {
+        font-size: 16px;
+    }
+
+    /* Download */
+    .download h2 {
+        font-size: 28px;
+    }
+    .download-card img {
+        width: 150px;
+    }
+    .download-buttom img {
+        width: 200px;
+    }
+    .download ul {
+        margin-right: 0;
+        font-size: 12px;
+        padding: 0 10px;
+        list-style: none;
+        text-align: center;
+    }
+
+    .download li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    /* Footer */
+    .Social-Media-icon {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .Social-Media-icon ul {
+        gap: 20px;
+    }
+    .Social-Media-icon ul li img {
+        width: 40px;
+    }
+}
