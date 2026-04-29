@@ -299,7 +299,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .download ul{
     color: #ffffff;
-    font-size: 15px;
+    font-size: 10px;
     margin-right: 95px;
     place-items: center;
     list-style: none;
