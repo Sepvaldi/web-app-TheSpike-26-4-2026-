@@ -184,7 +184,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .boder-out-box::-webkit-scrollbar-thumb {
     background: #ffffff; /* Warna pink seperti di gambar */
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Sedikit efek border putih transparan */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Sedikit efek border putih transparan */
+    background-clip: content-box;
+    
 }
 
 /* Efek saat thumb di-hover */
