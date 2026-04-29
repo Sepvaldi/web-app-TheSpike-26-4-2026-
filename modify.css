@@ -10,7 +10,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 @font-face {
-    font-family: 'jaro';
+    font-family: 'Jaro';
     src: url('path/to/jaro-font.woff2') format('woff2');
 }
 
