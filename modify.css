@@ -194,7 +194,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 /* Firefox Support (Opsional) */
 .boder-out-box {
-    scrollbar-width:thin;
+    scrollbar-width:none;
     scrollbar-color: #ffffff rgb(74, 170, 230, 0.58);
 }
 
