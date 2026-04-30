@@ -469,7 +469,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         gap: 10px;
     }
     .store-buttons img {
-        width: 100px;
+        width: 20px;
+        height: auto;
     }
 
     .hero{
